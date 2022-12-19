@@ -10,15 +10,82 @@
 
   --font-size-quote: 28px;
   --font-family-primary: "Manrope";
-  --font-weight-primary: 800;
+  --font-weight-primary: 400;
+  --font-weight-quote: 800;
 }
 
 body {
+  margin: 0;
+  padding: 0;
+
   background-color: var(--color-neutral-darkblue);
   color: var(--color-primary-lightcyan);
+
+  font-family: var(--font-family-primary), sans-serif;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: var(--color-neutral-darkgrayishblue);
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  align-items: center;
+  text-align: center;
+
+  padding: 50px 50px 70px 50px;
+
+  width: 30vw;
+  height: auto;
+
+  position: relative;
+
+  border-radius: 2rem;
+
+  box-shadow: rgba(0, 0, 0, 0.24) 10px 10px 30px;
+}
+
+.advice_number {
+  text-transform: uppercase;
+
+  font-size: 12px;
+  letter-spacing: 0.4em;
+
+  color: var(--color-primary-neongreen);
+}
+
+.advice_content {
+  margin: 0;
+
+  font-weight: var(--font-weight-quote);
+  font-size: var(--font-size-quote);
+}
+
+.randomize_button {
+  background-color: var(--color-primary-neongreen);
+  border-radius: 100%;
+  border: none;
+
+  width: 64px;
+  height: 64px;
+
+  position: absolute;
+  bottom: -32px;
 }
 
 .attribution {
+  position: absolute;
+  bottom: 8px;
+
   font-family: var(--font-family-primary);
 }
 
