@@ -3,126 +3,126 @@
 
 /* Style Guide */
 :root {
-  --color-primary-lightcyan: hsl(193, 38%, 86%);
-  --color-primary-neongreen: hsl(150, 100%, 66%);
+	--color-primary-lightcyan: hsl(193, 38%, 86%);
+	--color-primary-neongreen: hsl(150, 100%, 66%);
 
-  --color-neutral-grayishblue: hsl(217, 19%, 38%);
-  --color-neutral-darkgrayishblue: hsl(217, 19%, 24%);
-  --color-neutral-darkblue: hsl(218, 23%, 16%);
+	--color-neutral-grayishblue: hsl(217, 19%, 38%);
+	--color-neutral-darkgrayishblue: hsl(217, 19%, 24%);
+	--color-neutral-darkblue: hsl(218, 23%, 16%);
 
-  --font-size-quote: 28px;
-  --font-family-primary: "Manrope";
-  --font-weight-primary: 400;
-  --font-weight-quote: 800;
+	--font-size-quote: 28px;
+	--font-family-primary: "Manrope";
+	--font-weight-primary: 400;
+	--font-weight-quote: 800;
 }
 
 /* Desktop View */
 body {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 
-  background-color: var(--color-neutral-darkblue);
-  color: var(--color-primary-lightcyan);
+	background-color: var(--color-neutral-darkblue);
+	color: var(--color-primary-lightcyan);
 
-  font-family: var(--font-family-primary), sans-serif;
+	font-family: var(--font-family-primary), sans-serif;
 
-  width: 100vw;
-  height: 100vh;
+	width: 100vw;
+	height: 100vh;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 main {
-  background-color: var(--color-neutral-darkgrayishblue);
+	background-color: var(--color-neutral-darkgrayishblue);
 
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
 
-  align-items: center;
-  text-align: center;
+	align-items: center;
+	text-align: center;
 
-  padding: 50px 50px 70px 50px;
+	padding: 50px 50px 70px 50px;
 
-  width: 30vw;
-  height: auto;
+	width: 30vw;
+	height: auto;
 
-  position: relative;
+	position: relative;
 
-  border-radius: 2rem;
+	border-radius: 2rem;
 
-  box-shadow: rgba(0, 0, 0, 0.24) 10px 10px 30px;
+	box-shadow: rgba(0, 0, 0, 0.24) 10px 10px 30px;
 }
 
 .advice_number {
-  text-transform: uppercase;
+	text-transform: uppercase;
 
-  font-size: 0.8rem;
-  letter-spacing: 0.4em;
+	font-size: 0.8rem;
+	letter-spacing: 0.4em;
 
-  color: var(--color-primary-neongreen);
+	color: var(--color-primary-neongreen);
 }
 
 .advice_content {
-  margin: 0;
+	margin: 0;
 
-  font-weight: var(--font-weight-quote);
-  font-size: var(--font-size-quote);
+	font-weight: var(--font-weight-quote);
+	font-size: var(--font-size-quote);
 }
 
 .randomize_button {
-  background-color: var(--color-primary-neongreen);
-  border-radius: 100%;
-  border: none;
+	background-color: var(--color-primary-neongreen);
+	border-radius: 100%;
+	border: none;
 
-  width: 64px;
-  height: 64px;
+	width: 64px;
+	height: 64px;
 
-  position: absolute;
-  bottom: -32px;
+	position: absolute;
+	bottom: -32px;
 
-  transition: all 0.4s;
+	transition: all 0.4s;
 }
 
 .randomize_button:hover {
-  cursor: pointer;
+	cursor: pointer;
 
-  box-shadow: 0 0 24px var(--color-primary-neongreen);
+	box-shadow: 0 0 24px var(--color-primary-neongreen);
 
-  transition: all 0.2s;
+	transition: all 0.2s;
 }
 
 .attribution {
-  position: absolute;
-  bottom: 8px;
+	position: absolute;
+	bottom: 8px;
 
-  font-family: var(--font-family-primary);
+	font-family: var(--font-family-primary);
 }
 
 a {
-  text-decoration: none;
-  color: var(--color-primary-neongreen);
+	text-decoration: none;
+	color: var(--color-primary-neongreen);
 }
 
 a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 /* Mobile View */
-@media (max-width: 600px) {
-  body {
-    width: 100vw;
-    height: 100vh;
-  }
+@media (max-width: 375px) {
+	body {
+		width: 100vw;
+		height: 100vh;
+	}
 
-  main {
-    width: 340px;
-  }
+	main {
+		width: 340px;
+	}
 
-  .attribution {
-    font-size: 1rem;
-  }
+	.attribution {
+		font-size: 1rem;
+	}
 }
