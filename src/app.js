@@ -1,6 +1,6 @@
-const el_advice_number = document.querySelector(".advice_number")
+const el_advice_number = document.querySelector(".advice__number")
 const el_advice_content = document.querySelector("q")
-const el_randomize_button = document.querySelector(".randomize_button")
+const el_randomize_button = document.querySelector(".advice__randomizer")
 
 const API_URL = "https://api.adviceslip.com/advice"
 
@@ -29,7 +29,7 @@ el_randomize_button.addEventListener("click", htmlGeneration)
 window.onload = htmlGeneration
 
 if (window.innerWidth < 600) {
-  const el_divider = document.querySelector(".divider")
+  const el_divider = document.querySelector(".advice__divider")
 
   el_divider.src = "./src/images/pattern-divider-mobile.svg"
 }
