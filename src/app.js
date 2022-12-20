@@ -1,33 +1,35 @@
 const el_advice_number = document.querySelector(".advice_number")
-const el_advice_content = document.querySelector(".advice_content")
+const el_advice_content = document.querySelector("q")
 const el_randomize_button = document.querySelector(".randomize_button")
 
 const API_URL = "https://api.adviceslip.com/advice"
 
 const getDataFromApi = async () => {
-	const response = await fetch(API_URL)
-		.then(data => data.json())
+  const response = await fetch(API_URL)
+    .then(data => data.json())
 
-	if (response.ok == false) {
-		const message = `An error has occured: ${response.status}`;
-
-		throw new Error(message);
-	}
-
-	return response
+  return response
 }
 
-const htmlGeneration = () => {
-	const response = getDataFromApi();
+const htmlGeneration = async () => {
+  try {
+    const response = await getDataFromApi();
 
-	response.then(data => {
-		let { id, advice } = data.slip
+    let { id, advice } = response.slip
 
-		el_advice_number.innerHTML = `Advice #${id}`
-		el_advice_content.innerHTML = `${advice}`
-	})
+    el_advice_number.innerHTML = `Advice #${id}`
+    el_advice_content.innerHTML = `${advice}`
+  } catch (err) {
+    el_advice_number.innerHTML = `An error occured: ${err.status}`
+  }
 }
 
 el_randomize_button.addEventListener("click", htmlGeneration)
 
-document.body.addEventListener("load", htmlGeneration())
+window.onload = htmlGeneration
+
+if (window.innerWidth < 600) {
+  const el_divider = document.querySelector(".divider")
+
+  el_divider.src = "./src/images/pattern-divider-mobile.svg"
+}
