@@ -1,6 +1,3 @@
-/* Font */
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
-
 /* Style Guide */
 :root {
 	--color-primary-lightcyan: hsl(193, 38%, 86%);
@@ -35,7 +32,7 @@ body {
 	align-items: center;
 }
 
-main {
+.advice__app {
 	background-color: var(--color-neutral-darkgrayishblue);
 
 	display: flex;
@@ -112,14 +109,19 @@ a:hover {
 }
 
 /* Mobile View */
-@media (max-width: 375px) {
+@media (max-width: 600px) {
 	body {
 		width: 100vw;
 		height: 100vh;
 	}
 
-	main {
-		width: 340px;
+	.advice__app {
+		width: 360px;
+	}
+
+	.advice__divider {
+		width: 95%;
+		height: 95%;
 	}
 
 	.body__attribution {
